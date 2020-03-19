@@ -54,8 +54,6 @@ function makePlots(id) {
     }  
 
 
-
-    // get data
     function get_demographic_info(id) {
         d3.json("samples.json").then((data)=> {
             var metadata = data.metadata;
@@ -74,6 +72,7 @@ function makePlots(id) {
         get_demographic_info(id);
     }
     
+    // initialize function
     function init() {
         var drop_down = d3.select("#selDataset");
         d3.json("samples.json").then((data)=> {
